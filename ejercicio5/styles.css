@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  text-shadow:
+  0 0 10px #fff,
+  0 0 20px  #fff,
+  0 0 30px  #ffffff17,
+  0 0 40px  #c711ff,
+  0 0 60px  #c711ff,
+  0 0 80px  #c711ff;
+}

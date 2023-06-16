@@ -1,0 +1,142 @@
+* 
+{
+    --amarillo: #F7C700;
+    --azul: #002E83;
+    --rojo: #C20F2D;
+}
+
+.triangulos 
+{
+    width: 0px;
+    height: 0px;
+    display: inline-flex;
+    gap: 12px;
+}
+
+.figura 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trianguloAmarillo 
+{
+    border-bottom: 200px solid var(--amarillo);
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    animation: transicionAzulRojo 3s normal 0.4s infinite forwards;
+}
+
+.trianguloAzul 
+{
+    border-bottom: 200px solid var(--azul);
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    animation: transicionRojoAmarillo 3s normal 0.4s infinite forwards;
+}
+
+.trianguloRojo 
+{
+    border-bottom: 200px solid var(--rojo);
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    animation: transicionAmarilloAzul 3s normal 0.4s infinite forwards;
+}
+
+/* ANIMACIONES */
+/* Transición del primer triangulo */
+@keyframes transicionAzulRojo 
+{
+    0%, 29% 
+    {
+        border-bottom: 200px solid var(--amarillo);
+    }
+
+    30%, 59% 
+    {
+        border-bottom: 200px solid var(--azul);
+    }
+
+    60%, 99% 
+    {
+        border-bottom: 200px solid var(--rojo);
+    }
+}
+
+/* Transición del segundo triangulo */
+@keyframes transicionRojoAmarillo 
+{
+
+    0%, 29% 
+    {
+        border-bottom: 200px solid var(--azul);
+    }
+
+    30%, 59% 
+    {
+        border-bottom: 200px solid var(--rojo);
+    }
+
+    60%, 99% 
+    {
+        border-bottom: 200px solid var(--amarillo);
+    }
+}
+
+/* Transición del tercer triangulo */
+@keyframes transicionAmarilloAzul 
+{
+    0%, 29% 
+    {
+        border-bottom: 200px solid var(--rojo);
+    }
+
+    30%, 59% 
+    {
+        border-bottom: 200px solid var(--amarillo);
+    }
+
+    60%, 99% 
+    {
+        border-bottom: 200px solid var(--azul);
+    }
+}
+
+/* CAMBIO DEL TEXTO */
+
+.texto span 
+{
+    float: left;
+    overflow: hidden;
+    animation: mostrar 3s linear infinite;
+}
+
+.texto span:nth-child(2) 
+{
+    animation-delay: -0s;
+}
+
+.texto span:nth-child(1) 
+{
+    animation-delay: -1s;
+}
+
+.texto span:nth-child(3) 
+{
+    animation-delay: -2s;
+}
+
+@keyframes mostrar 
+{
+
+    0%, 33%, 100% 
+    {
+        width: 0;
+    }
+
+    50% 
+    {
+        width: auto;
+    }
+}

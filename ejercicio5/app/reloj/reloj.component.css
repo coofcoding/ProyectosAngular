@@ -1,0 +1,12 @@
+.hora {
+  width: 80%;
+  height: 20%;
+  font-size: 6rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 900;
+  padding: 15px 30px;
+  border-radius: 1rem;
+}
