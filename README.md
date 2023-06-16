@@ -1,6 +1,6 @@
 # Proyectos de Angular
 ## Proyectos
-. proyecto001
+· proyecto001
 . proyecto002
 . proyecto003
 . proyecto004
