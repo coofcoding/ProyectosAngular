@@ -1,0 +1,50 @@
+<div class="seccion">
+    <div class="seccionDatos">
+        <input class="ingresoDatos" type="text" readonly [value]="cadenaOperacion">
+        <p class="resultado" [textContent]="resultado"></p>
+    </div>
+    <div class="encendidoOapagado">
+        <button (click)="powerOff()" class="btn-estado apagado">Off</button>
+        <button (click)="powerOn()" class="btn-estado encendido">On</button>
+    </div>
+    <div class="botones-avanzados">
+        <div class="fila">
+            <button (click)="addDato('e')" class="btn-avanzado">e</button>
+            <button (click)="addDato('**')" class="btn-avanzado">&#94;</button>
+            <button (click)="addDato('parentesisIzq')" class="btn-avanzado">&#40;</button>
+            <button (click)="addDato('parentesisDer')" class="btn-avanzado">&#41;</button>
+            <button (click)="addDato('/100')" class="btn-avanzado">%</button>
+            <button (click)="addDato('pi')" class="btn-avanzado">&#928;</button>
+        </div>
+    </div>
+    <div class="botones-basicos">
+        <div class="fila">
+            <button (click)="addDato('7')" class="btn-basico">7</button>
+            <button (click)="addDato('8')" class="btn-basico">8</button>
+            <button (click)="addDato('9')" class="btn-basico">9</button>
+            <button (click)="deleteChar()" class="btn-basico red-btn">DEL</button>
+            <button (click)="funcAc()" class="btn-basico red-btn">AC</button>
+        </div>
+        <div class="fila">
+            <button (click)="addDato('4')" class="btn-basico">4</button>
+            <button (click)="addDato('5')" class="btn-basico">5</button>
+            <button (click)="addDato('6')" class="btn-basico">6</button>
+            <button (click)="addDato('*')" class="btn-basico">X</button>
+            <button (click)="addDato('/')" class="btn-basico">÷</button>
+        </div>
+        <div class="fila">
+            <button (click)="addDato('1')" class="btn-basico">1</button>
+            <button (click)="addDato('2')" class="btn-basico">2</button>
+            <button (click)="addDato('3')" class="btn-basico">3</button>
+            <button (click)="addDato('+')" class="btn-basico">+</button>
+            <button (click)="addDato('-')" class="btn-basico">-</button>
+        </div>
+        <div class="fila">
+            <button (click)="addDato('0')" class="btn-basico">0</button>
+            <button (click)="addDato('.')" class="btn-basico">.</button>
+            <button (click)="addDato('E')" class="btn-basico">EXP</button>
+            <button (click)="ansFunc()" class="btn-basico">Ans</button>
+            <button (click)="equals()" class="btn-basico">&#61;</button>
+        </div>
+    </div>
+</div>
