@@ -1,0 +1,22 @@
+<div class="lista-personajes">
+  <div class="pagina">
+    <div class="personaje" *ngFor="let per of personajes.results">
+      <img class="char-photo" [srcset]="per.image" width="200" height="200" />
+      <div class="informacion">
+        <h4>{{ per.name }}</h4>
+        <p><span class="char-info">Status:</span> {{ per.status }}</p>
+        <p><span class="char-info">Species:</span> {{ per.species }}</p>
+        <p><span class="char-info">Gender:</span> {{ per.gender }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="paginacion">
+  <div class="info-pagina">
+    <p><span class="char-info">Page:</span> {{ pagina }}</p>
+  </div>
+  <div class="buttons">
+    <button class="botones" (click)="paginaAnterior()"><img class="page-icon" src="assets/images/back.png" width="35" height="35"></button>
+  <button class="botones" (click)="paginaSiguiente()"><img class="page-icon" src="assets/images/forward.png" width="35" height="35"></button>
+  </div>
+</div>
