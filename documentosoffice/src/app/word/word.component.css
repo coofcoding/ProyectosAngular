@@ -1,0 +1,5 @@
+.frameWord {
+    border: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.184);
+    border-radius: 20px;
+}

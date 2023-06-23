@@ -1,0 +1,43 @@
+.secciones {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.enlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    margin: 0 10px;
+    width: calc(40%/5);
+    color: rgb(38, 29, 49);
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+a:hover {
+    background-color: rgb(65, 58, 102);
+    color: white;
+}
+a:focus {
+    background-color: rgb(65, 58, 102);
+    color: white;
+}
+.enlaces {
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px #0000003f;
+    margin-bottom: 20px;
+}
+.paginas {
+    color: rgb(38, 29, 49);
+    display: flex;
+    justify-content: center;
+    height: 82vh;
+    overflow-y: auto;
+    scroll-behavior: auto;
+}
