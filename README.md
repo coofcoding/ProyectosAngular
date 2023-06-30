@@ -1,31 +1,31 @@
 ### Desarrollados
 Todos estos proyectos han sido desarrollados con: 
 
-* [![Next][Next.js]][Next-url]
-* [![Angular][Angular.io]][Angular-url]
+* [![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/es)
+* [![AngularJS](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](AngularJS)
 
 # Proyectos de Angular
 ## Proyectos
-- proyecto001
-- proyecto002
-- proyecto003
-- proyecto004
-- proyecto005
-- proyecto006
-- proyecto008
-- proyecto009
-- proyecto010
-- proyecto011
-- proyecto012
-- proyecto013
-- proyecto016
+* proyecto001
+* proyecto002
+* proyecto003
+* proyecto004
+* proyecto005
+* proyecto006
+* proyecto008
+* proyecto009
+* proyecto010
+* proyecto011
+* proyecto012
+* proyecto013
+* proyecto016
 ## Trabajos
-- proyecto002
-- triangulo
-- ejercicio5
-- ejercicio010
-- calculadoracientifica
-- officedocs
+* proyecto002
+* triangulo
+* ejercicio5
+* ejercicio010
+* calculadoracientifica
+* officedocs
 ## Nombre
 Kevin Alexander López Duque
 ## Grupo
