@@ -1,0 +1,5 @@
+**SpreadSheet**
+npm install @syncfusion/ej2-angular-spreadsheet --save
+
+**DocumentEditor**
+npm install @syncfusion/ej2-angular-documenteditor --save
