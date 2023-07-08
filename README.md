@@ -37,10 +37,10 @@ Kevin Alexander López Duque
 Grupo 69º UAM
 ## Instalación proyecto Officedocs
 Instalar las siguientes librerías ántes de ejecutar el proyecto `officedocs`
-  ```shell
+  ```powershell
   npm install @syncfusion/ej2-angular-spreadsheet --save
   ```
-  ```shell
+  ```powershell
   npm install @syncfusion/ej2-angular-documenteditor --save
   ```
 
