@@ -45,6 +45,27 @@ Instalar las siguientes librerías ántes de ejecutar el proyecto `officedocs`
   ```
 
   ## Instalación proyecto videogamescrud
+  Primero instalamos la extension de bootstrap con sus iconos:
+  ```powershell
+  npm install bootstrap jquery @popperjs/core
+  ```
+  ```powershell
+  npm i bootstrap-icons
+  ```
+  Y a continuación importamos las rutas de bootstrap en `angular.json`:
+
+  ```json
+  "styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "src/styles.scss"
+],
+"scripts": [
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/@popperjs/core/dist/umd/popper.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js"
+]
+  ```
+
 Ejecutar el siguiente comando `sql` para crear la base de datos:
   ```sql
   create database videoyogos;
@@ -77,3 +98,4 @@ create table videogames(
     id_user int, foreign key (id_user) references users(id_user)
 );
   ```
+
