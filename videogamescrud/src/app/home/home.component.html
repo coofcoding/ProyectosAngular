@@ -1,0 +1,65 @@
+<section class="d-flex vh-100 justify-content-center align-items-center bg-light">
+    <div class="card mx-4 mx-md-5 border w-50 p-2 text-dark">
+        <div class="card-body py-5 px-md-5 ">
+
+            <div class="row d-flex justify-content-center ">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Sign in</h2>
+                    <form>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" id="username"
+                                class="form-control focus-ring focus-ring-danger border border-danger-subtle" name="username" [(ngModel)]="user_info.username"/>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form3Example4">Password</label>
+                            <input type="password" id="form3Example4"
+                                class="form-control focus-ring focus-ring-danger border border-danger-subtle" name="password" [(ngModel)]="user_info.password"/>
+                        </div>
+
+                        <p>Don't you have an account? <a routerLink="/register" class="link-danger link-offset-2">Create one</a></p>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-danger btn-block mb-4 px-5 py-2" (click)="userLogIn()">
+                            Sign in
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->
+<!-- <div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8">
+            <div class="d-flex px-5 bg-body flex-column justify-content-center align-items-center vh-100">
+                <h1 class="mb-3 font-monospace">L O G I N</h1>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                </div>
+                <form class="d-flex flex-column w-75" action="./config/Process.php" method="POST">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="FirstName" class="form-label">Username</label>
+                            <input type="text" name="username" [(ngModel)]="user_info.username" class="form-control" placeholder="Username" aria-label="username">
+                        </div>
+                        <div class="col">
+                            <label for="LastName" class="form-label">Password</label>
+                            <input type="password" name="pass" class="form-control" placeholder="...." aria-label="pass" name="password" [(ngModel)]="user_info.password">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-grid">
+                            <button type="submit" (click)="userLogIn()" class="btn btn-dark py-2 text-uppercase font-monospace">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,36 @@
+<section class="d-flex vh-100 justify-content-center align-items-center bg-light">
+    <div class="card mx-4 mx-md-5 w-50 border p-2 text-dark ">
+        <div class="card-body py-5 px-md-5 ">
+
+            <div class="row d-flex justify-content-center ">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Sign Up</h2>
+                    <form>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" id="username"
+                                class="form-control border border-primary-subtle"  name="nUsername" [(ngModel)]="nUser.nUsername"/>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="password">Password</label>
+                            <input type="password" id="password"
+                                class="form-control border border-primary-subtle" name="nPassword" [(ngModel)]="nUser.nPassword"/>
+                        </div>
+
+                        <p>Do you have an account? <a routerLink="/login" class="link-primary link-offset-2">Sign In</a></p>
+
+                        <!-- Submit button -->
+                        <button type="submit" (click)="createAccount()" class="btn btn-primary btn-block mb-4 px-5 py-2">
+                            Create Account
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

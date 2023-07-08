@@ -1,0 +1,135 @@
+<div class="container-fluid bg-white shadow-sm">
+    <header
+        class="d-flex mx-5 mx-5 flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+        <div class="col-md-3 mb-2 mb-md-0">
+            <a class="d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#dc3545" class="bi bi-box-fill"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001 6.971 2.789Zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z" />
+                </svg>
+                <span class="fs-4 ms-3 text-danger fw-semibold">Videoyogos</span>
+            </a>
+        </div>
+
+        <div class="text-end d-flex">
+            <button type="button" class="btn btn-outline-danger me-3 w-5" *ngIf="root === true" data-bs-toggle="modal"
+                data-bs-target="#modalCreateNewGame">
+                <i class="bi bi-file-earmark-plus"></i>
+                New Game
+            </button>
+            <button type="button" class="btn btn-danger" routerLink="/login">
+                <i class="bi bi-box-arrow-right"></i>
+                Log out
+            </button>
+        </div>
+    </header>
+</div>
+
+<div class="d-flex flex-wrap justify-content-center">
+    <div class="card text-bg-light m-3" style="max-width: 18rem;" *ngFor="let game of games">
+        <div class="card-header"><i class="bi bi-person"></i> {{game.author}}</div>
+        <div class="card-body pb-0">
+            <h5 class="card-title"><i class="bi bi-controller"></i> {{game.game_name}}</h5>
+            <div class="d-flex justify-content-between mb-3">
+                <p class="card-text text-secondary mb-0"><i class="bi bi-calendar-event"></i> {{game.publish_date}}</p>
+                <p *ngIf="root === true" class="card-text text-secondary"><i class="bi bi-key"></i> {{game.id_game}}</p>
+            </div>
+        </div>
+        <div class="d-flex mx-3 mb-3" *ngIf="root === true">
+            <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#modalEditGame"><i
+                    class="bi bi-pencil-square"></i> Edit</button>
+            <button type="button" class="btn btn-danger" (click)="deleteGame(game.id_game)"><i class="bi bi-trash3"></i>
+                Delete</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Create New Game -->
+<div class="modal fade" id="modalCreateNewGame" tabindex="-1" aria-labelledby="modalCreateNewGame" aria-hidden="true"
+    *ngIf="root === true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New Game</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="gameName" class="form-label">Game Name</label>
+                        <input type="text" class="form-control focus-ring focus-ring-danger border border-danger-subtle"
+                            id="gameName" aria-describedby="gameNameHelp" [(ngModel)]="gameData.game_name"
+                            name="game_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="gameAuthor" class="form-label">Author</label>
+                        <input type="text" class="form-control focus-ring focus-ring-danger border border-danger-subtle"
+                            id="gameAuthor" aria-describedby="gameAuthorHelp" [(ngModel)]="gameData.author"
+                            name="author">
+                    </div>
+                    <div class="mb-3">
+                        <label for="publishDate" class="form-label">Publish Date</label>
+                        <input type="text" class="form-control focus-ring focus-ring-danger border border-danger-subtle"
+                            id="publishDate" placeholder="YYYY-MM-DD" aria-describedby="publishDateHelp"
+                            [(ngModel)]="gameData.publish_date" name="publish_date">
+                        <div id="publishDate" class="form-text">Please follow the format correctly.</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" name="addNewGame" (click)="addNewGame()">Add New
+                    Game</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Edit Game -->
+<div class="modal fade" id="modalEditGame" tabindex="-1" aria-labelledby="modalEditGame" aria-hidden="true"
+    *ngIf="root === true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Game</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="gameId" class="form-label">Id Game</label>
+                        <input type="text" class="form-control focus-ring focus-ring-danger border border-danger-subtle"
+                            id="gameId" aria-describedby="gameNameHelp" [(ngModel)]="gameData.id_game"
+                            name="id_game">
+                            <div id="publishDate" class="form-text">Please confirm the id of the game.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="gameName" class="form-label">Game Name</label>
+                        <input type="text" class="form-control focus-ring focus-ring-danger border border-danger-subtle"
+                            id="gameName" aria-describedby="gameNameHelp" [(ngModel)]="gameData.game_name"
+                            name="game_name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="gameAuthor" class="form-label">Author</label>
+                        <input type="text" class="form-control focus-ring focus-ring-danger border border-danger-subtle"
+                            id="gameAuthor" aria-describedby="gameAuthorHelp" [(ngModel)]="gameData.author"
+                            name="author">
+                    </div>
+                    <div class="mb-3">
+                        <label for="publishDate" class="form-label">Publish Date</label>
+                        <input type="text" class="form-control focus-ring focus-ring-danger border border-danger-subtle"
+                            id="publishDate" placeholder="YYYY-MM-DD" aria-describedby="publishDateHelp"
+                            [(ngModel)]="gameData.publish_date" name="publish_date">
+                        <div id="publishDate" class="form-text">Please follow the format correctly.</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" name="addNewGame" (click)="editGame()">Edit Game</button>
+            </div>
+        </div>
+    </div>
+</div>
