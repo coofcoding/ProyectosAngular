@@ -48,6 +48,7 @@ Instalar las siguientes librerías ántes de ejecutar el proyecto `officedocs`
   ### Integrantes:
   * Juan Diego Lopez Montoya
   * Kevin Alexander Lopez Duque
+
   Primero instalamos la extension de bootstrap con sus iconos:
   ```powershell
   npm install bootstrap jquery @popperjs/core
