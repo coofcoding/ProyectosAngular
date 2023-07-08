@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ArticulosService {
 
-  url = 'https://scratchya.com.ar/angular/proyecto916/';
+  url = 'http://localhost/Api_Angular/';
 
   constructor(private http: HttpClient) { }
 
